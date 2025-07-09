@@ -71,22 +71,22 @@ Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 ### Setup Instructions for Arch-based 
 
 ```bash
-1️⃣ update pacman & packages
- ᯓ➤ # sudo pacman -Syyu
+1️⃣ # update pacman & packages
+ ᯓ➤ sudo pacman -Syyu
 
-2️⃣ install dependencies
-  //since arch doesnot separate lib packages: libbluetooth-dev included in bluez package//
- ᯓ➤ # sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
+2️⃣ # install dependencies
+  # since arch doesnot separate lib packages: libbluetooth-dev included in bluez package
+ ᯓ➤ sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
                python-setuptools python-pydbus python-dbus
                git gcc python-pip \
 
-3️⃣ install pybluez from source
- ᯓ➤ # git clone https://github.com/pybluez/pybluez.git
+3️⃣ # install pybluez from source
+ ᯓ➤ git clone https://github.com/pybluez/pybluez.git
        cd pybluez
        sudo python3 setup.py install
 
-4️⃣ build bdaddr from the bluez source
- ᯓ➤ # cd ~/
+4️⃣ # build bdaddr from the bluez source
+ ᯓ➤ cd ~/
        git clone --depth=1 https://github.com/bluez/bluez.git
        gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
        sudo cp bdaddr /usr/local/bin/
