@@ -1,121 +1,130 @@
-# BlueDucky Ver 2.1 (Android) 🦆
+# BlueDucky Version 0 (Android) 🦆
+Ported & Optimized for Kali Linux by Hackwithakki
 
-Thanks to all the people at HackNexus. Make sure you come join us on VC !
-https://discord.gg/HackNexus
+Welcome to all the people at HACKING WORLD. Make sure to join us on Telegram !
+Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 
-NOTES: I will not be able to run this on a laptop or other device outside of a raspberry pi for testing. Due to this, any issues you have will need to be resolved amonsgt each other as I do not have the spare funds to buy an adapter. 
+🔹 Credits to the original contributors:
 
-1. [saad0x1's GitHub](https://github.com/saad0x1)
-2. [spicydll's GitHub](https://github.com/spicydll)
-3. [lamentomori's GitHub](https://github.com/lamentomori)
+ ᯓ➤[saad0x1 on GitHub]
+ ᯓ➤[spicydll on GitHub]
 
 <p align="center">
   <img src="./images/duckmenu.png">
 </p>
 
-🚨 CVE-2023-45866 - BlueDucky Implementation (Using DuckyScript)
+🚨 CVE-2023-45866 - Exploitation via DuckyScript 🦆
 
-🔓 Unauthenticated Peering Leading to Code Execution (Using HID Keyboard)
+🔓 Unauthenticated Bluetooth Peering ᯓ➤Remote Code Execution (Using HID Keyboard)
 
-[This is an implementation of the CVE discovered by marcnewlin](https://github.com/marcnewlin/hi_my_name_is_keyboard)
+[This tool is based on the vulnerability Discovered by Marc Newlin CVE-2023-45866](https://github.com/marcnewlin/hi_my_name_is_keyboard)
+
+⚠️ This version has been customized and optimized specifically for Kali Linux by Hackwithakki, to ensure better stability and seamless integration in pentesting environments.
 
 <p align="center">
   <img src="./images/BlueDucky.gif">
 </p>
 
 ## Introduction 📢
-BlueDucky is a powerful tool for exploiting a vulnerability in Bluetooth devices. By running this script, you can:
+🧠 What is BlueDucky?
+╰┈➤ BlueDucky is a powerful linux based tool for wireless HID Attack through Bluetooth. By running this Duckyscript, you can:
 
-1. 📡 Load saved Bluetooth devices that are no longer visible but have Bluetooth still enabled.
-2. 📂 Automatically save any devices you scan.
-3. 💌 Send messages via ducky script format to interact with devices.
+ᯓ➤ 📡Reconnect with previously paired Bluetooth devices (even if not visible) but have Bluetooth still enabled.
+ᯓ➤ 📂 Automatically save devices to reuse.
+ᯓ➤ 💌 Execute HID keystroke payloads via DuckyScript.
 
-I've successfully run this on a Raspberry Pi 4 using the default Bluetooth module. It works against various phones, with an interesting exception for a New Zealand brand, Vodafone.
+✔️ Tested and stable on a Raspberry Pi 4 using the default Bluetooth module 
+✔️ It works against various phones. 
+⚠️ Note: Vodafone New Zealand brand may behave differently
 
 ## Installation and Usage 🛠️
 
 ### Setup Instructions for Debian-based 
 
 ```bash
-# update apt
-sudo apt-get update
-sudo apt-get -y upgrade
+#1️⃣ update apt
+ᯓ➤ sudo apt-get update && sudo apt-get -y upgrade
 
-# install dependencies from apt
-sudo apt install -y bluez-tools bluez-hcidump libbluetooth-dev \
+#2️⃣ install dependencies from apt
+ᯓ➤ sudo apt install -y bluez-tools bluez-hcidump libbluetooth-dev \
                     git gcc python3-pip python3-setuptools \
                     python3-pydbus
 
-# install pybluez from source
-git clone https://github.com/pybluez/pybluez.git
-cd pybluez
-sudo python3 setup.py install
+#3️⃣ install pybluez from source
+ᯓ➤ git clone https://github.com/pybluez/pybluez.git
+      cd pybluez
+      sudo python3 setup.py install
 
-# build bdaddr from the bluez source
-cd ~/
-git clone --depth=1 https://github.com/bluez/bluez.git
-gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
-sudo cp bdaddr /usr/local/bin/
+#4️⃣ build bdaddr from the bluez source
+ᯓ➤ cd ~/
+      git clone --depth=1 https://github.com/bluez/bluez.git
+      gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
+      sudo cp bdaddr /usr/local/bin/
 ```
 ### Setup Instructions for Arch-based 
 
 ```bash
-# update pacman & packages
-sudo pacman -Syyu
+#1️⃣ update pacman & packages
+ᯓ➤ sudo pacman -Syyu
 
-# install dependencies
+#2️⃣ install dependencies
 # since arch doesn't separate lib packages: libbluetooth-dev included in bluez package
-sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
+ᯓ➤ sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
                python-setuptools python-pydbus python-dbus
                git gcc python-pip \
 
-# install pybluez from source
-git clone https://github.com/pybluez/pybluez.git
-cd pybluez
-sudo python3 setup.py install
+#3️⃣ install pybluez from source
+ᯓ➤ git clone [https://github.com/pybluez/pybluez.git](https://github.com/pybluez/pybluez.git)
+      cd pybluez
+      sudo python3 setup.py install
 
-# build bdaddr from the bluez source
-cd ~/
-git clone --depth=1 https://github.com/bluez/bluez.git
-gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
-sudo cp bdaddr /usr/local/bin/
+#4️⃣ build bdaddr from the bluez source
+ᯓ➤ cd ~/
+      git clone --depth=1 [https://github.com/bluez/bluez.git](https://github.com/bluez/bluez.git)
+      gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
+      sudo cp bdaddr /usr/local/bin/
 ```
 
-## Running BlueDucky
+##▶️ How to Run BlueDucky
 ```bash
-git clone https://github.com/pentestfunctions/BlueDucky.git
-cd BlueDucky
-sudo hciconfig hci0 up
-python3 BlueDucky.py
+ᯓ➤ git clone https://github.com/hackwithakki/BlueDucky.git
+ᯓ➤ cd BlueDucky
+ᯓ➤ sudo hciconfig
+ᯓ➤ sudo hciconfig hci0 up
+ᯓ➤ sudo hcitool scan
+ᯓ➤ python3 BlueDucky.py
 ```
 
 alternatively,
 
 ```bash
-pip3 install -r requirements.txt
+ᯓ➤ pip3 install -r requirements.txt
 ```
 
-## Operational Steps 🕹️
-1. On running, it prompts for the target MAC address.
-2. Pressing nothing triggers an automatic scan for devices.
-3. Devices previously found are stored in known_devices.txt.
-4. If known_devices.txt exists, it checks this file before scanning.
-5. Executes using payload.txt file.
-6. Successful execution will result in automatic connection and script running.
+## ⚙️ How It Works Operational Steps 🕹️
+ᯓ➤ After starting, it prompts for the target MAC address.
+ᯓ➤ Leave it blank to start auto-scanning.
+ᯓ➤ Devices previously found are stored in known_devices.txt.
+ᯓ➤ If that file exists,and checks this file before scanning. it’s used as a device cache
+ᯓ➤ The script executes using payload.txt file.
+ᯓ➤ Successful execution will auto-connects and executes keystrokes.
 
 ## Duckyscript 💻
 🚧 Work in Progress:
 - Suggest me ideas
 
-## Version 2.1 🐛
+## Version 0 🦠ᯓᡣ𐭩
 - Updated UI
 - Improved User Experience
-- Bluetooth Debugger; Checks your bluetooth adapters, and installed dependancies before allowing access to the application, this is to prevent devices that are not supported.
+- Bluetooth Debugger; Checks your bluetooth ON, and installed dependancies before allowing access to the application, this is to prevent devices that are not supported.
 - Please Note: Numerous Changes have been made,please reference the commit history for specific changes.
   
-## What's Planned for the Next Release?
-- Integrated DuckyScript Console for attacks that want to maintain persistance, after a payload has been ran
-- Suggest What Should be added next! Join https://discord.gg/HackNexus
+## What's Planned for the Release?
+🛡️ Notes from Hackwithakki
+✅ Stable & fully optimized for Kali Linux
+🧠 Ideal for pentesters and researchers
+🐧 Works great on Kali, Raspberry Pi, and similar platforms
+- Suggest What Should be added next! Join🔗 [https://t.me/hackwithakki](https://t.me/hackwithakki)
 
 #### 📝 Example payload.txt:
 ```bash
@@ -125,7 +134,7 @@ GUI D
 ```
 
 ```bash
-REM Opens a private browser to hackertyper.net
+REM Opens a private browser to https://www.instagram.com/hackwithakki/
 DELAY 200
 ESCAPE
 GUI d
@@ -137,7 +146,7 @@ PRIVATE_BROWSER
 DELAY 700
 CTRL l
 DELAY 300
-STRING hackertyper.net
+STRING https://www.instagram.com/hackwithakki/
 DELAY 300
 ENTER
 DELAY 300
