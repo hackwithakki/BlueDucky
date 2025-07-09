@@ -70,21 +70,21 @@ Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 
 ```bash
 1️⃣ update pacman & packages
-ᯓ➤ sudo pacman -Syyu
+ᯓ➤ # sudo pacman -Syyu
 
 2️⃣ install dependencies
 # since arch doesn't separate lib packages: libbluetooth-dev included in bluez package
-ᯓ➤ sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
+ᯓ➤ # sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
                python-setuptools python-pydbus python-dbus
                git gcc python-pip \
 
 3️⃣ install pybluez from source
-ᯓ➤ git clone https://github.com/pybluez/pybluez.git
+ᯓ➤ # git clone https://github.com/pybluez/pybluez.git
       cd pybluez
       sudo python3 setup.py install
 
 4️⃣ build bdaddr from the bluez source
-ᯓ➤ cd ~/
+ᯓ➤ # cd ~/
       git clone --depth=1 https://github.com/bluez/bluez.git
       gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
       sudo cp bdaddr /usr/local/bin/
@@ -106,12 +106,17 @@ alternatively,
 ᯓ➤ pip3 install -r requirements.txt
 ```
 
-## ⚙️ How It Works Operational Steps 🕹️
+## ⚙️ How it Works Operational Steps 🕹️
 ᯓ➤ After starting, it prompts for the target MAC address.
+
 ᯓ➤ Leave it blank to start auto-scanning.
+
 ᯓ➤ Devices previously found are stored in known_devices.txt.
+
 ᯓ➤ If that file exists,and checks this file before scanning. it’s used as a device cache
+
 ᯓ➤ The script executes using payload.txt file.
+
 ᯓ➤ Successful execution will auto-connects and executes keystrokes.
 
 ## Duckyscript 💻
@@ -134,7 +139,7 @@ alternatively,
 
 🐧 Works great on Kali, Raspberry Pi, and similar platforms
 
-- Suggest What Should be added next! Join🔗 [https://t.me/hackwithakki](https://t.me/hackwithakki)
+ᯓᡣ𐭩 Suggest What Should be added next! Join🔗 [https://t.me/hackwithakki](https://t.me/hackwithakki)
 
 #### 📝 Example payload.txt:
 ```bash
