@@ -49,24 +49,24 @@ Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 ### Setup Instructions for Debian-based 
 
 ```bash
-1️⃣ update apt
+1️⃣ # update apt
 ᯓ➤ sudo apt-get update && sudo apt-get -y upgrade
 
-2️⃣ install dependencies from apt
+2️⃣ # install dependencies from apt
 ᯓ➤ sudo apt install -y bluez-tools bluez-hcidump libbluetooth-dev \
                     git gcc python3-pip python3-setuptools \
                     python3-pydbus
 
-3️⃣ install pybluez from source
+3️⃣ # install pybluez from source
 ᯓ➤ git clone https://github.com/pybluez/pybluez.git
-      cd pybluez
-      sudo python3 setup.py install
+     cd pybluez
+     sudo python3 setup.py install
 
-4️⃣ build bdaddr from the bluez source
+4️⃣ # build bdaddr from the bluez source
 ᯓ➤ cd ~/
-      git clone --depth=1 https://github.com/bluez/bluez.git
-      gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
-      sudo cp bdaddr /usr/local/bin/
+     git clone --depth=1 https://github.com/bluez/bluez.git
+     gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
+     sudo cp bdaddr /usr/local/bin/
 ```
 ### Setup Instructions for Arch-based 
 
