@@ -22,27 +22,25 @@ TAB
 ENTER
 DELAY 7000
 REM # Enter your message here
-STRING get clapped by 4ngel6uard
+STRING YOU ARE HACKED !...
 DELAY 500
 TAB
 TAB
 ENTER
 DELAY 2000
 REM # Enter your another message here
-STRING hehehe
+STRING Hii this is TEAM rootSTAR !
 DELAY 300
 TAB
 TAB
 ENTER
 DELAY 2000
 REM # Enter your another message here
-STRING blueducky was there
+STRING Mission completed !
 DELAY 300
 TAB
 TAB
 ENTER
 DELAY 2000
 REM # Enter your another message here (doesn't send, leaves in a box)
-STRING good luck =)
-
-
+STRING BE AWARE FROM NEXT TIME !
