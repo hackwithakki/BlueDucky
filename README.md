@@ -28,6 +28,7 @@ Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 
 ## Introduction 📢
 🧠 What is BlueDucky?
+
 ╰┈➤ BlueDucky is a powerful linux based tool for wireless HID Attack through Bluetooth. By running this Duckyscript, you can:
 
 ᯓ➤ 📡Reconnect with previously paired Bluetooth devices (even if not visible) but have Bluetooth still enabled.
@@ -73,21 +74,21 @@ Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 ᯓ➤ # sudo pacman -Syyu
 
 2️⃣ install dependencies
-# since arch doesn't separate lib packages: libbluetooth-dev included in bluez package
+    since arch doesn't separate lib packages: libbluetooth-dev included in bluez package
 ᯓ➤ # sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
                python-setuptools python-pydbus python-dbus
                git gcc python-pip \
 
 3️⃣ install pybluez from source
 ᯓ➤ # git clone https://github.com/pybluez/pybluez.git
-      cd pybluez
-      sudo python3 setup.py install
+       cd pybluez
+       sudo python3 setup.py install
 
 4️⃣ build bdaddr from the bluez source
 ᯓ➤ # cd ~/
-      git clone --depth=1 https://github.com/bluez/bluez.git
-      gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
-      sudo cp bdaddr /usr/local/bin/
+       git clone --depth=1 https://github.com/bluez/bluez.git
+       gcc -o bdaddr ~/bluez/tools/bdaddr.c ~/bluez/src/oui.c -I ~/bluez -lbluetooth
+       sudo cp bdaddr /usr/local/bin/
 ```
 
 ##▶️ How to Run BlueDucky
