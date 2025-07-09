@@ -9,7 +9,7 @@ from utils.register_device import register_hid_profile, agent_loop
 
 child_processes = []
 
-# ANSI escape sequences for color
+# ANSI escape sequences for colors
 class AnsiColorCode:
     RED = '\033[91m'
     GREEN = '\033[92m'
