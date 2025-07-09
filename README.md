@@ -74,7 +74,7 @@ Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 ᯓ➤ # sudo pacman -Syyu
 
 2️⃣ install dependencies
-    since arch doesn't separate lib packages: libbluetooth-dev included in bluez package
+         since arch doesn't separate lib packages: libbluetooth-dev included in bluez package
 ᯓ➤ # sudo pacman -S bluez-tools bluez-utils bluez-deprecated-tools \
                python-setuptools python-pydbus python-dbus
                git gcc python-pip \
