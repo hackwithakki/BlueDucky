@@ -1,8 +1,7 @@
 # BlueDucky Version 0 (Android) 🦆
 Ported & Optimized for Kali Linux by Hackwithakki
 
-Welcome to all the people at HACKING WORLD. 
-
+Welcome dear HACK3RS 
 Make sure to join us on Telegram ! Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
 
 🔹 Credits to the original contributors:
