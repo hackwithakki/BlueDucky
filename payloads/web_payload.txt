@@ -1,4 +1,4 @@
-REM Opens a private browser to https://yourbihari.wixsite.com/hackwithakki
+REM Opens a private browser to a specific My website
 DELAY 200
 ESCAPE
 GUI d
@@ -6,7 +6,7 @@ ALT ESCAPE
 GUI b
 DELAY 700
 REM PRIVATE_BROWSER is equal to CTRL + SHIFT + N
-PRIVATE_BROWSER
+CTRL SHIFT n
 DELAY 700
 CTRL l
 DELAY 300
