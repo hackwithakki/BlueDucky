@@ -123,7 +123,7 @@ alternatively,
 🚧 Work in Progress:
 - Suggest me ideas
 
-## Version 0 🦠ᯓᡣ𐭩
+## Version-0 🦠ᯓᡣ𐭩
 - Updated UI
 - Improved User Experience
 - Bluetooth Debugger; Checks your bluetooth ON, and installed dependancies before allowing access to the application,
