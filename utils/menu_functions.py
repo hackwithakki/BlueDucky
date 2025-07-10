@@ -86,7 +86,7 @@ def clear_screen():
 def save_devices_to_file(devices, filename='known_devices.txt'):
     with open(filename, 'w') as file:
         for addr, name in devices:
-            file.write(f"{addr},{name}\n")
+            file.write(f"{addr} | {name}\n")
 
 def get_yes_no():
     stdscr = curses.initscr()
@@ -114,7 +114,7 @@ def scan_for_devices():
     if known_devices:
         print("\nKnown devices:")
         for idx, (addr, name) in enumerate(known_devices):
-            print(f"{idx + 1}: Device Name: {name}, Address: {addr}")
+            print(f"{idx + 1}: Device Name: {name} | Address: {addr}")
 
         use_known_device = input("\nDo you want to use one of these known devices? (yes/no): ")
         if use_known_device.lower() == 'yes':
@@ -138,7 +138,7 @@ def scan_for_devices():
         known_devices += new_devices
         save_devices_to_file(known_devices)
         for idx, (addr, name) in enumerate(new_devices):
-            print(f"{idx + 1}: Device Name: {name}, Address: {addr}")
+            print(f"{idx + 1}: Device Name: {name} | Address: {addr}")
     return device_list
 
 def print_menu():
