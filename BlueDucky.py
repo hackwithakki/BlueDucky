@@ -601,7 +601,7 @@ def setup_bluetooth(target_address, adapter_id):
     profile_proc.start()
     child_processes.append(profile_proc)
     adapter = Adapter(adapter_id)
-    adapter.set_property("name", "Robot POC")
+    adapter.set_property("name", "Nancy")
     adapter.set_property("class", 0x002540)
     adapter.power(True)
     return adapter
