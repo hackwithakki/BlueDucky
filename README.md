@@ -1,4 +1,4 @@
-# BlueDucky Version 0 (Android) 🦆
+# BlueDucky 🦆 Version-0
 Ported & Optimized for Kali Linux by Hackwithakki
 
 Welcome dear HACK3RS 
@@ -92,14 +92,12 @@ Visit Here -[🎭 https://t.me/hackwithakki 🎭](https://t.me/hackwithakki)
        sudo cp bdaddr /usr/local/bin/
 ```
 
-##▶️ How to Run BlueDucky
+## ▶️ How to Run BlueDucky
 ```bash
 ᯓ➤ git clone https://github.com/hackwithakki/BlueDucky.git
 ᯓ➤ cd BlueDucky
-ᯓ➤ sudo hciconfig
 ᯓ➤ sudo hciconfig hci0 up
-ᯓ➤ sudo hcitool scan
-ᯓ➤ python3 BlueDucky.py
+ᯓ➤ sudo python3 BlueDucky.py
 ```
 
 alternatively,
@@ -151,7 +149,7 @@ GUI D
 ```
 
 ```bash
-REM Opens a private browser to https://www.instagram.com/hackwithakki/
+REM Opens a private browser to a specific Instagram profile
 DELAY 200
 ESCAPE
 GUI d
@@ -159,7 +157,7 @@ ALT ESCAPE
 GUI b
 DELAY 700
 REM PRIVATE_BROWSER is equal to CTRL + SHIFT + N
-PRIVATE_BROWSER
+CTRL SHIFT n
 DELAY 700
 CTRL l
 DELAY 300
