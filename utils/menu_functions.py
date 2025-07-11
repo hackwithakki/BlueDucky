@@ -86,7 +86,7 @@ def clear_screen():
 def save_devices_to_file(devices, filename='known_devices.txt'):
     with open(filename, 'w') as file:
         for addr, name in devices:
-            file.write(f"{addr} | {name}\n")
+            file.write(f"{addr}, {name}\n")
 
 def get_yes_no():
     stdscr = curses.initscr()
