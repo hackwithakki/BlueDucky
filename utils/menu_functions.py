@@ -114,7 +114,7 @@ def scan_for_devices():
     if known_devices:
         print("\nKnown devices:")
         for idx, (addr, name) in enumerate(known_devices):
-            print(f"{idx + 1}: Device Name: {name}, Address: {addr}")
+            print(f"{idx + 1}: Device Name: {name} | Address: {addr}")
 
         use_known_device = input("\nDo you want to use one of these known devices? (yes/no): ")
         if use_known_device.lower() == 'yes':
@@ -138,7 +138,7 @@ def scan_for_devices():
         known_devices += new_devices
         save_devices_to_file(known_devices)
         for idx, (addr, name) in enumerate(new_devices):
-            print(f"{idx + 1}: Device Name: {name}, Address: {addr}")
+            print(f"{idx + 1}: Device Name: {name} | Address: {addr}")
     return device_list
 
 def print_menu():
@@ -147,8 +147,8 @@ def print_menu():
     print("\033[1;35m" + separator)  # Purple color for separator
     print("\033[1;33m" + title.center(len(separator)))  # Yellow color for title
     print("\033[1;35m" + separator + "\033[0m")  # Purple color for separator
-    print("\033[1;32m" + "Remember, you can still attack devices without visibility..." + "\033[0m")
-    print("\033[1;32m" + "If you have their MAC address" + "\033[0m")
+    print("\033[1;32m" + "卄 ﾑ 𝖈 𝗸╰ꛃⁱ‿ᵗꛅ╯ﾑ 𝗸 𝗸 ！| you can still attack devices without visibility..." + "\033[0m")
+    print("\033[1;32m" + "If you have their MAC address..." + "\033[0m")
     print("\033[1;35m" + separator + "\033[0m")  # Purple color for separator
 
 def main_menu():
