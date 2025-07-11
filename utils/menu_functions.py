@@ -86,7 +86,7 @@ def clear_screen():
 def save_devices_to_file(devices, filename='known_devices.txt'):
     with open(filename, 'w') as file:
         for addr, name in devices:
-            file.write(f"{addr}, {name}\n")
+            file.write(f"{addr},{name}\n")
 
 def get_yes_no():
     stdscr = curses.initscr()
@@ -147,7 +147,7 @@ def print_menu():
     print("\033[1;35m" + separator)  # Purple color for separator
     print("\033[1;33m" + title.center(len(separator)))  # Yellow color for title
     print("\033[1;35m" + separator + "\033[0m")  # Purple color for separator
-    print("\033[1;32m" + "Hackwithakki | you can still attack devices without visibility..." + "\033[0m")
+    print("\033[1;32m" + "Hackwithakki, you can still attack devices without visibility..." + "\033[0m")
     print("\033[1;32m" + "If you have their MAC address" + "\033[0m")
     print("\033[1;35m" + separator + "\033[0m")  # Purple color for separator
 
