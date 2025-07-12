@@ -147,7 +147,7 @@ def print_menu():
     print("\033[1;35m" + separator)  # Purple color for separator
     print("\033[1;33m" + title.center(len(separator)))  # Yellow color for title
     print("\033[1;35m" + separator + "\033[0m")  # Purple color for separator
-    print("\033[1;32m" + "卄 ﾑ 𝖈 𝗸╰ꛃⁱ‿ᵗꛅ╯ﾑ 𝗸 𝗸 ！| you can still attack devices without visibility..." + "\033[0m")
+    print("\033[1;32m" + "卄ﾑ𝖈𝗸╰Ꮗⁱ‿ᵗ𝔥╯ﾑ𝗸𝗸！| you can still attack devices without visibility..." + "\033[0m")
     print("\033[1;32m" + "If you have their MAC address..." + "\033[0m")
     print("\033[1;35m" + separator + "\033[0m")  # Purple color for separator
 
